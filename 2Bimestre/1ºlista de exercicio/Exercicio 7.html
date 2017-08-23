@@ -1,0 +1,37 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Peso(){
+				//declara Variavel
+				var nro1,pesoengorda,pesoemagrece;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				nro1 = parseFloat(document.getElementById("nro1").value);
+				pesoengorda = nro1 + ((nro1/100)*15)
+				pesoemagrece = nro1 - ((nro1/100)*20)
+				//mostra resultado
+				document.getElementById("pesoengordar").innerHTML = "Seu peso com 15% a mais é de: " + pesoengorda;
+				document.getElementById("pesoemagrecer").innerHTML = "Seu peso com 20% a menos é de: " + pesoemagrece;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 7</h1>
+		<p>
+			<b>Digite seu peso: </b><input type="number" id="nro1"/>
+		</p>
+		<p>
+			<button onclick="Peso()">Calcular os novos pesos.</button>
+		<p>
+			<h2 id="pesoengordar"></h2>
+			<h2 id="pesoemagrecer"></h2>			
+		<p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Divisao(){
+				//declara Variavel
+				var nro1, nro2,resultado;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				nro1 = parseFloat(document.getElementById("nro1").value);
+				nro2 = parseFloat(document.getElementById("nro2").value);
+				//calcula  divisão
+				if (nro2 == 0){ //Comparação
+				alert("Divisão por 0 NÃO PODE!!!");
+				}
+				else{
+				resultado = nro1 / nro2;
+				//mostra resultado
+				}
+				document.getElementById("resultado").innerHTML = "Divisão: " + resultado;
+			}
+			function voltar(){
+		location.href="Principal.html"
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 3</h1>
+		<p>
+			<b>Número 1: </b><input type="number" id="nro1"/>
+		</p>
+		<p>
+			<b>Número 2: </b><input type="number" id="nro2"/>
+		</p>
+		<p>
+			<button onclick="Divisao()">Dividir</button>
+		</p>	
+			<h2 id="resultado"></h2>
+		<p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>;
+	</body>
+</html>

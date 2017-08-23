@@ -1,0 +1,35 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Desconto(){
+				//declara Variavel
+				var nro1, nro2,nro3, resultado;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				nro1 = parseFloat(document.getElementById("nro1").value);
+				//calcula desocnto
+				resultado = nro1 - ((nro1/100)*10)
+				//mostra resultado
+				document.getElementById("resultado").innerHTML = "Valor com Desconto: " + resultado;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 5</h1>
+		<p>
+			<b>Valor: </b><input type="number" id="nro1"/>
+		</p>
+		<p>
+			<button onclick="Desconto()">Veja com desocnto de 10%</button>
+		</p>	
+			<h2 id="resultado"></h2>
+		<p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

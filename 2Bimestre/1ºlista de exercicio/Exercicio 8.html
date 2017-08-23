@@ -1,0 +1,35 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Peso(){
+				//declara Variavel
+				var nro1,grama;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				nro1 = parseFloat(document.getElementById("nro1").value);
+				grama = nro1 *1000
+				//mostra resultado
+				document.getElementById("gramas").innerHTML = "Seu peso em gramas é de: " + grama;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 8</h1>
+		<p>
+			<b>Digite seu peso: </b><input type="number" id="nro1"/>
+		</p>
+		<p>
+			<button onclick="Peso()">Calcular seu peso em gramas.</button>
+		<p>
+			<h2 id="gramas"></h2>
+					
+		</p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

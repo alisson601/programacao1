@@ -1,0 +1,42 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Salariofinal(){
+				//declara Variavel
+				var nro1, nro2,comissao, resultado;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				nro1 = parseFloat(document.getElementById("nro1").value);
+				nro2 = parseFloat(document.getElementById("nro2").value);
+				comissao = (nro2/100)*4
+				resultado = nro1 + comissao
+				//mostra resultado
+				document.getElementById("comissao").innerHTML = "Sua comissão é de: " + comissao;
+				document.getElementById("resultado").innerHTML = "Seu sálario final será de: " + resultado;	
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 6</h1>
+		<p>
+			<b>Digite seu salário: </b><input type="number" id="nro1"/>
+		</p>
+		<p>
+			<b>Digite o valor de suas vendas: </b><input type="number" id="nro2"/>
+		</p>
+		
+		<p>
+			<button onclick="Salariofinal()">Clique para saber seu salario final</button>
+		</p>	
+			<h2 id="comissao"></h2>
+			<h2 id="resultado"></h2>			
+		<p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

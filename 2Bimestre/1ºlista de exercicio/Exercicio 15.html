@@ -1,0 +1,43 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Salario(){
+				//declara Variavel
+				var salario,conta1,conta2,salariorest;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				salario = parseFloat(document.getElementById("salario").value);
+				conta1 = parseFloat(document.getElementById("conta1").value);
+				conta2 = parseFloat(document.getElementById("conta2").value);
+				//mostra resultado
+				salariorest = salario - (((conta1/100)*2)+conta1) - (((conta2/100)*2)+conta2)
+				
+				document.getElementById("salarios").innerHTML = "O restante do seu sálario é de: " + salariorest;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 15</h1>
+		<p>
+			<b>Digite o valor do seu salário: </b><input type="number" id="salario"/>
+		</p>
+		<p>
+			<b>Digite o valor do da sua 1 dívida será acrescentado 2%:  </b><input type="number" id="conta1"/>
+		<p>
+		<p>
+			<b>Digite o valor do da sua 2 dívida será acrescentado 2%::  </b><input type="number" id="conta2"/>
+		</p>
+			<button onclick="Salario()">Calcule quantos restará do seu salário.</button>
+		<p>
+			<h2 id="salarios"></h2>
+					
+		</p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

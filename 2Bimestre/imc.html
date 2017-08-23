@@ -1,0 +1,58 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/stilo.css"/>
+		<script>
+			function CalculaIdade(){
+				//em javascripts as variaveis nao são tipadas "elas nao tem tipos"
+				var ano;//declaração de variavel
+				var idade;//idade do usuario
+				//atribuição do valor do usuário
+				//ano = prompt("Informe o ano de nascimento: ");
+				ano = document.getElementById("ano").value;
+				idade = 2017 - ano; //subtração (-)
+				//operador +: junta a constante com a variável
+				//alert("Ano digitado: "+ ano);
+				document.getElementById("anodigitado").innerHTML = "Ano digitado: "+ ano;
+				//alert("Idade calculada: "+ idade)
+				document.getElementById("idadecalculada").innerHTML = "Idade calculada: " + idade;
+			}
+			function CalculaImc(){
+				var peso;
+				var altura;
+				var imc;
+				peso = document.getElementById("peso").value;
+				altura = document.getElementById("altura").value;
+			imc = peso / ( altura*altura );
+			document.getElementById("imc").innerHTML = "Seu imc é:" + imc;
+			}
+		</script>
+	</head>
+	<body>
+		<p>
+			<b>Ano:</b> <input type="number" id="ano"/>
+		</p>
+		<p>
+			<button onclick="CalculaIdade()"> Calcular Idade</button>
+		</p>
+		<p>
+			Resultado
+			<h3 id="anodigitado"> </h3>
+			<h3 id="idadecalculada"></h3>
+		
+		<p>
+			<b>Peso:</b> <input type="number" id="peso"/>
+		</p>	
+		
+		<p>
+			<b>Altura:</b> <input type="number" id="altura"/>
+		</p>
+				<p>
+			<button onclick="CalculaImc()"> Calcular Imc</button>
+		</p>
+					Resultado
+			<p>
+				<h3 id="imc"> </h3>
+			</p>
+	</body>
+</html>

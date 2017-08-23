@@ -1,0 +1,39 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Losango(){
+				//declara Variavel
+				var diagonalmaior,diagonalmenor,area;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				diagonalmaior = parseFloat(document.getElementById("diagonalmaior").value);
+				diagonalmenor = parseFloat(document.getElementById("diagonalmenor").value);
+				area = (diagonalmaior*diagonalmenor)/2
+				//mostra resultado
+				document.getElementById("area").innerHTML = "A area do losango é de: " + area;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 11</h1>
+		<p>
+			<b>Digite o valor da diagonal maior: </b><input type="number" id="diagonalmaior"/>
+		</p>
+		<p>
+			<b>Digite o valor da diagonal menor: </b><input type="number" id="diagonalmenor"/>
+		</p>
+		<p>
+			<button onclick="Losango()">Calcule a area do Losango.</button>
+		<p>
+			<h2 id="area"></h2>
+					
+		</p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

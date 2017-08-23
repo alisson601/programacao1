@@ -1,0 +1,37 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Salario(){
+				//declara Variavel
+				var salariominimo,salariofuncionario;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				salariofuncionario = parseFloat(document.getElementById("salariofuncionario").value);
+				salariominimo = parseFloat(document.getElementById("salariominimo").value);
+				//mostra resultado
+				document.getElementById("salarios").innerHTML = "O salário tem o número de salário minímo de: " + salariofuncionario/salariominimo;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 12</h1>
+		<p>
+			<b>Digite o valor do salário mínimo atual:  </b><input type="number" id="salariominimo"/>
+		</p>
+		<p>
+			<b>Digite o valor do salário do funcionário:  </b><input type="number" id="salariofuncionario"/>
+		<p>
+			<button onclick="Salario()">Calcule quantos salários mínimos tem o salário.</button>
+		<p>
+			<h2 id="salarios"></h2>
+					
+		</p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+		<script>
+			function subtrai(){
+				//declara Variavel
+				var nro1, nro2, resultado;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				nro1 = parseFloat(document.getElementById("nro1").value);
+				nro2 = parseFloat(document.getElementById("nro2").value);
+				//calcula  subtração
+				resultado = nro1 - nro2;
+				//mostra resultado
+				document.getElementById("resultado").innerHTML = "Subtração " + resultado;
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 1</h1>
+		<p>
+			Número 1 <input type="number" id="nro1"/>
+		</p>
+		<p>
+			Número 2 <input type="number" id="nro2"/>
+		<p>
+			<button onclick="subtrai()">Subtrai </button>
+		</p>	
+			<h2 id="resultado"></h2>
+		<p>
+
+	</body>
+</html>

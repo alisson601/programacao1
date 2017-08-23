@@ -1,0 +1,35 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Quadrado(){
+				//declara Variavel
+				var lado,area;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				lado = parseFloat(document.getElementById("lado").value);
+				area = lado*lado
+				//mostra resultado
+				document.getElementById("area").innerHTML = "A area do quadrado é de: " + area;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 10</h1>
+		<p>
+			<b>Digite o valor de um dos lados do quadrado: </b><input type="number" id="lado"/>
+		</p>
+		<p>
+			<button onclick="Quadrado()">Calcule a area do Quadrado.</button>
+		<p>
+			<h2 id="area"></h2>
+					
+		</p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

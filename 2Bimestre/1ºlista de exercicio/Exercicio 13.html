@@ -1,0 +1,84 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Tabuada(){
+				//declara Variavel
+				var numero;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				numero = parseFloat(document.getElementById("numero").value);
+				//mostra resultado
+				document.getElementById("0").innerHTML = numero + " X 0 = " + numero * 0;
+				document.getElementById("1").innerHTML = numero + " X 1 = " + numero * 1;
+				document.getElementById("2").innerHTML = numero + " X 2 = " + numero * 2;
+				document.getElementById("3").innerHTML = numero + " X 3 = " + numero * 3;
+				document.getElementById("4").innerHTML = numero + " X 4 = " + numero * 4;
+				document.getElementById("5").innerHTML = numero + " X 5 = " + numero * 5;
+				document.getElementById("6").innerHTML = numero + " X 6 = " + numero * 6;
+				document.getElementById("7").innerHTML = numero + " X 7 = " + numero * 7;
+				document.getElementById("8").innerHTML = numero + " X 8 = " + numero * 8;
+				document.getElementById("9").innerHTML = numero + " X 9 = " + numero * 9;
+				document.getElementById("10").innerHTML = numero + " X 10 = " + numero * 10;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 13</h1>
+		<p>
+			<b>Digite o número que quer a Tabuada: </b><input type="number" id="numero"/>
+		</p>
+		<p>
+			<button onclick="Tabuada()">Calcule a Tabuada.</button>
+		<p>
+			<h3 id="0"></h3>
+					
+		</p>
+		<p>
+			<h3 id="1"></h3>
+					
+		</p>
+		<p>
+			<h3 id="2"></h3>
+					
+		</p>
+		<p>
+			<h3 id="3"></h3>
+					
+		</p>
+		<p>
+			<h3 id="4"></h3>
+					
+		</p>
+		<p>
+			<h3 id="5"></h3>
+					
+		</p>
+		<p>
+			<h3 id="6"></h3>
+					
+		</p>
+		<p>
+			<h3 id="7"></h3>
+					
+		</p>
+		<p>
+			<h3 id="8"></h3>
+					
+		</p>
+		<p>
+			<h3 id="9"></h3>
+					
+		</p>
+		<p>
+			<h3 id="10"></h3>
+					
+		</p>
+				<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+	</body>
+</html>

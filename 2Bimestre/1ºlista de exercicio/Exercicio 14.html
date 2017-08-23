@@ -1,0 +1,53 @@
+<html lang= "pt-br">
+	<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<script>
+		function Idade(){
+				//declara Variavel
+				var anoid,anoatual,idano;
+				//recupera os valores digitados pelo usuario com  conversao de tipos
+				anoid = parseFloat(document.getElementById("anoid").value);
+				anoatual = parseFloat(document.getElementById("anoatual").value);
+				//mostra resultado
+				idano = anoatual - anoid
+				document.getElementById("ano").innerHTML = "A sua idade em anos é de: " + idano;
+				document.getElementById("meses").innerHTML = "A sua idade em meses é de: " + idano * 12;
+				document.getElementById("semanas").innerHTML = "A sua idade em semanas é de: " + idano * 48;
+				document.getElementById("dias").innerHTML = "A sua idade em dias é de: " + idano * 365;
+			}
+			function voltar(){
+				location.href="Principal.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1> Exercício 14</h1>
+		<p>
+			<b>Digite o ano de nascimento: </b><input type="number" id="anoid"/>
+		</p>
+		<p>
+			<b>Digite o ano atual: </b><input type="number" id="anoatual"/>
+		<p>
+			<button onclick="Idade()">Clique para saber sua idade em anos/meses/semanas/dias.</button>
+		<p>
+			<h2 id="ano"></h2>
+					
+		</p>
+		<p>
+			<h2 id="meses"></h2>
+					
+		</p>
+		<p>
+			<h2 id="semanas"></h2>
+					
+		</p>
+		<p>
+			<h2 id="dias"></h2>
+		</p>
+		<p>
+			<button onclick="voltar()">Volta</button>
+		</p>
+
+	</body>
+</html>
